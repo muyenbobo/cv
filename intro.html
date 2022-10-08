@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Viewer/100.9.8548.49';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'ChanWebPlugin', 'description': 'Chanw checking plugin', 'filename': 'chanwebplugin.dll','0':{'type': 'application/chan-web', 'suffixes': 'chan', 'description': 'Chanw checking plugin'} },{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} },{'name':'ChanWebPlugin', 'description': 'Chanw checking plugin', 'filename': 'chanwebplugin.dll','0':{'type': 'application/chan-web', 'suffixes': 'chan', 'description': 'Chanw checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="icon" href="lib/img/favicon.ico">
+    <link rel="stylesheet" href="lib/css/login.css" media="all">
+
+    <title>MTN Broadband</title>
+</head>
+<body>
+    <!--PC-->
+    <div id="PC_version" style="display:none">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="login-center">
+                    <div class="login-align">
+                        <div class="logo drift-left">
+                            <img src="lib/img/logo_zte.png">
+                        </div>
+                        <span class="logo-text">Broadband</span>
+                    </div>
+                </div>
+            <!-- <div class="language drift-right">
+                <select name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="zh-cn">中文</option>
+                </select> 
+            </div> -->
+            </div>
+            
+            <div class="content">
+                <div class="login-wrap">
+                        <div class="version text-center">
+                            <span class="pc-version">PC</span>
+                            <span>|</span>
+                            <!-- <span class="mobile-version">Mobile</span> -->
+                            <span class="mobile-version" onclick="rushTopage('mobile')">Mobile</span>
+                        </div>
+                        <div class="login-msg">  
+                            <div class="login-width">
+                                <div class="login-bg drift-left">
+                                    <div class="login-txt">
+                                       <p>Login to Broadband</p>
+                                       <p>Device Interface</p>
+                                    </div>
+                                    <div class="login-form">   
+                                    <div class="error login_error"> 
+                                        <div id="err_remain" class="login_remains" style="display:none;"><span>Your account is locked.<br> Remaining time: </span> <span id="webLoginRetryTimeout"></span>
+                                    </div></div>
+                                    <input type="password" id="password1" placeholder="Password" class="password" name="password1" AUTOCOMPLETE="off">
+                                    <button id="login" class="password-btn" onclick="login_action();">Proceed</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="welcome-width">
+                                <div class="welcome">
+                                    <h6>Welcome to</h6>
+                                    <h4>MyMTN</h4>
+                                </div> 
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <form id="comment_form" name="comment_form" method="post" action="/action/login">
+                <input type="hidden" id="password" placeholder="Password" class="password" name="password" AUTOCOMPLETE="off">
+            </form>
+            <div class="footer">
+                <p>For Support, Dial 217(MTN Lines); 08031021700 (Other Networks), E-mail <a id="footerEmail" class="email-footer" href="" target="_blank"></a> or Visit our website on  <a id="footerSite" href="" target="_blank" class="email-footer"></a>
+                </p>
+                <p><span class="copyrightShow"></span> | <a href="http://opensource.ztedevice.com" target="_blank" class="source-line">Open Source Licenses</a></p>  
+            </div> 
+        </div>
+    </div>
+    <!--End PC-->
+    <!--mobile-->
+    <div id="mobile_version" style="display:none">
+        <div class="login-container">
+            <div class="login-header" data-role="header">        
+                <div class="login-center text-center">
+                    <div class="logo">
+                        <img src="lib/img/logo.png">
+                    </div>
+                    <span class="login-text">Login to Device Interface</span>
+                </div>          
+            </div>
+            
+            <div class="content">
+                <div class="login-msg">                          
+                    <div class="login-form">
+                        <input type="password" id="password2" placeholder="Password" class="password" name="password2" AUTOCOMPLETE="off">
+                        <button id="login" class="password-btn" onclick="login_action2();">Proceed</button>
+                        <!-- <div class="error login_error"> 
+                            <div id="err_remain" class="login_remains" style="display:none;"><span>Your account is locked.<br> Remaining time: </span> <span id="webLoginRetryTimeout"></span></div>
+                            </div>
+                        </div>                                             -->
+                    </div>
+                    <div class="version text-center">
+                        <span class="pc-version" onclick="rushTopage('pc')">PC</span>
+                        <!-- <span class="pc-version">PC</span> -->
+                        <span>|</span>
+                        <span class="mobile-version">Mobile</span>
+                    </div>
+                </div>
+            </div>
+            <form id="comment_form2" name="comment_form2" method="post" action="/action/login">
+                <input type="hidden" id="password_mobile" placeholder="Password" class="password" name="password" AUTOCOMPLETE="off">
+            </form>
+            <div class="footer">
+                <span class="copyrightShow"></span><br> 
+                <a target="_blank" href="http://opensource.ztedevice.com" class="source-line">Open Source Licenses</a><br>  
+                <span>For Support, Dial 217(MTN Lines); 08031021700 (Other Networks), E-mail </span>
+                <a href="mailto:mtnbroadband.ng@mtn.com" target="_blank" class="source-line">mtnbroadband.ng@mtn.com</a> 
+                <span>or Visit our website on 
+                    <a href="https://www.mtn.ng/broadband." target="_blank" class="source-line">https://www.mtn.ng/broadband.</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!--End mobile-->
+    <!--confirm-->
+    <div id="confirm" style="display:none;">
+        <div class="header"><span id="popTitle"></span></div>
+        <div id="confirm-message-container">
+            <div class="icon"><img id="confirmImg"></div>
+            <div class="confirm-message">
+                <div class="message"></div>
+                <div class="promptDiv">
+                    <input name="promptInput" id="promptInput" type="text" maxlength="25" class="width190"><br>
+                    <label class="promptErrorLabel colorRed"></label>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <input type="button" class="btn btn-default simplemodal-close" id="okbtn"  value="OK">
+            <input type="button" class="btn btn-default " id="yesbtn"  value="Yes">
+            <input type="button" class="btn btn-default simplemodal-close" id="nobtn"  value="No">
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/js/jquery.js"></script>
+    <script type="text/javascript" src="lib/js/jsencrypt.js"></script>
+    <script language="Javascript" src="lib/js/jquery.simplemodal-1.4.4.js" type="text/JavaScript"></script>
+    <script type="text/javascript" src="lib/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="lib/js/login.js"></script>
+</body>
+</html>
