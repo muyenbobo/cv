@@ -1,3 +1,28 @@
+html{background-color: darksalmon;}
+p {background-color: rgb(127, 255, 212)255, 212, 0.829)255, 212, 0.829)255, 212, 0.829)255, 212, 0.829)255, 212, 0.829)255, 212, 0.829);
+    font-size: 20px;
+    font-family: cursive;
+    color: blue;}
+    table,tr,th,td {border: 2px solid rgba(111, 101, 253, 0.774);
+        padding: 20px;}  
+      th {background-color: chartreuse;
+        color: chocolate;
+        font-family: cursive;
+        font-size: 15px;}
+      td {background-color: black;
+        color: aqua;
+        background-image: ;}
+        head {background-color: rgb(221, 255, 127);};}
+        textarea {background-color: darkgoldenrod;}
+     title {background-color: aqua;
+        color: ;}
+        p {}
+        .block {background-color: rgb(5, 139, 0);
+        height: 100px;
+        font-size: 50px;
+        width: 400px;}
+      .line {background-color: tomato;
+        width: 50px;}
 h1.block {padding: 80px 100px ;}
         #outer {
           width: 300px;
